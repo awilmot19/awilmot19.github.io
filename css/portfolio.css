@@ -1,0 +1,190 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  background: #111; }
+
+body {
+  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #111;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  width: 100%; }
+
+header {
+  background: #111;
+  height: 9vmin; }
+  header .header-area {
+    height: 7vmin;
+    padding-top: 1vmin;
+    display: flex; }
+    header .header-area .logo-area {
+      position: relative;
+      height: 100%;
+      width: 30%; }
+      header .header-area .logo-area .logo-line {
+        height: 10%;
+        width: 1000%;
+        background: white;
+        position: absolute;
+        transition: background 0.5s ease-in-out;
+        -webkit-transition: background 0.5s ease-in-out;
+        -moz-transition: background 0.5s ease-in-out; }
+      header .header-area .logo-area .beforeline {
+        left: 40%; }
+      header .header-area .logo-area .afterline {
+        bottom: 0px;
+        right: 60%; }
+      header .header-area .logo-area .menu-line {
+        position: absolute;
+        background: #777;
+        height: 9%;
+        width: 39px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out; }
+      header .header-area .logo-area img {
+        height: 100%;
+        margin-left: 27%;
+        -webkit-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out; }
+        header .header-area .logo-area img:hover {
+          -webkit-filter: brightness(46.7%);
+          filter: brightness(46.7%); }
+    header .header-area ul {
+      margin-top: 6px;
+      margin-right: 4%;
+      position: absolute;
+      right: 0px;
+      height: 7vmin;
+      width: 45%;
+      display: flex;
+      list-style-type: none;
+      align-content: space-around; }
+      header .header-area ul li {
+        display: flex;
+        flex-grow: 1;
+        height: 100%; }
+        header .header-area ul li a {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          color: white;
+          text-decoration: none;
+          transition: 0.3s; }
+          header .header-area ul li a:hover {
+            color: #777; }
+          header .header-area ul li a h4 {
+            margin: auto;
+            font-weight: 400; }
+
+.main {
+  height: 83vmin;
+  width: 100%;
+  background: url("../images/macbook.jpg");
+  background-size: cover;
+  background-position: center; }
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 8vmin;
+  min-height: 60px;
+  background: #111; }
+  footer ul {
+    display: flex;
+    height: 1.5vmin;
+    margin: auto 2vw; }
+    footer ul li {
+      display: flex;
+      padding: 0 0.8vw;
+      color: #eee;
+      font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 300; }
+      footer ul li a {
+        text-decoration: none;
+        color: #eee; }
+
+#portfolio {
+  height: 83vmin;
+  width: 100%;
+  background: #ddd;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap; }
+  #portfolio .workframe {
+    width: 33.33333%;
+    height: 42%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; }
+    #portfolio .workframe a {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: black; }
+      #portfolio .workframe a:hover img {
+        transform: scale(1.1); }
+      #portfolio .workframe a:hover .demo-image {
+        height: 80%; }
+      #portfolio .workframe a:hover .description {
+        bottom: 0px;
+        height: 20%; }
+      #portfolio .workframe a .description {
+        display: flex;
+        position: relative;
+        bottom: -20%;
+        height: 0px;
+        width: 100%;
+        background-color: #555555;
+        transition: 0.5s; }
+        #portfolio .workframe a .description h4 {
+          color: #ddd;
+          margin: auto; }
+      #portfolio .workframe a .demo-image {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        transition: 0.5s; }
+        #portfolio .workframe a .demo-image img {
+          height: 60%;
+          width: auto;
+          max-width: 80%;
+          margin: auto;
+          transition: 0.5s; }
+  #portfolio .frame-1 {
+    background-color: #ffffff; }
+  #portfolio .frame-3 {
+    background-color: #cbccce; }
+    #portfolio .frame-3 a .demo-image img {
+      max-height: 27%; }
+  #portfolio .frame-2 {
+    background-color: #444; }
+    #portfolio .frame-2 a .demo-image img {
+      max-height: 40%; }
+
+@media (max-width: 1120px) {
+  #portfolio {
+    height: 125vmin; }
+    #portfolio .workframe {
+      width: 50%;
+      height: 31%; } }
+@media (max-width: 600px) {
+  #portfolio {
+    height: 250vmin; }
+    #portfolio .workframe {
+      width: 100%;
+      height: 16%; } }
+
+/*# sourceMappingURL=portfolio.css.map */

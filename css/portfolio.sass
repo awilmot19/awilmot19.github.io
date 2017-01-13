@@ -1,0 +1,231 @@
+*
+  padding: 0
+  margin: 0
+
+html
+  -webkit-font-smoothing: antialiased
+  background: #111
+
+body
+  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif
+  color: #111
+  background-color: #fff
+  -webkit-text-size-adjust: 100%
+  -webkit-font-feature-settings: "kern" 1
+  -moz-font-feature-settings: "kern" 1
+  -o-font-feature-settings: "kern" 1
+  font-feature-settings: "kern" 1
+  font-kerning: normal
+  //overflow: hidden
+  //min-width: 1184px
+  width: 100%
+  //overflow: hidden
+
+header
+  background: #111
+  height: 9vmin
+
+  .header-area
+    height: 7vmin
+    padding-top: 1vmin
+    display: flex
+
+    .logo-area
+      position: relative
+      height: 100%
+      width: 30%
+
+      .logo-line
+        height: 10%
+        width: 1000%
+        background: white
+        position: absolute
+        transition: background 0.5s ease-in-out
+        -webkit-transition: background 0.5s ease-in-out
+        -moz-transition: background 0.5s ease-in-out
+
+      .beforeline
+        left: 40%
+
+      .afterline
+        bottom: 0px
+        right: 60%
+
+      .menu-line
+        position: absolute
+        background: #777
+        height: 9%
+        width: 39px
+        opacity: 0.0
+        transition: opacity 0.3s ease-in-out
+
+      img
+        height: 100%
+        margin-left: 27%
+        -webkit-transition: all 0.5s ease-in-out
+        transition: all 0.5s ease-in-out
+
+        &:hover
+          -webkit-filter: brightness(46.7%)
+          filter: brightness(46.7%)
+
+    ul
+      //margin: auto 0 auto auto
+      margin-top: 6px
+      margin-right: 4%
+      position: absolute
+      right: 0px
+      height: 7vmin
+      width: 45%
+      display: flex
+      //margin-left: auto
+      list-style-type: none
+      align-content: space-around
+
+      li
+        display: flex
+        flex-grow: 1
+        height: 100%
+
+        a
+          display: flex
+          width: 100%
+          height: 100%
+          color: white
+          text-decoration: none
+          transition: 0.3s
+
+          &:hover
+            color: #777
+
+          h4
+            margin: auto
+            font-weight: 400
+
+.main
+  height: 83vmin
+  width: 100%
+  background: url('../images/macbook.jpg')
+  background-size: cover
+  background-position: center
+
+footer
+  display: flex
+  width: 100%
+  height: 8vmin
+  min-height: 60px
+  background: #111
+
+  ul
+    display: flex
+    height: 1.5vmin
+    margin: auto 2vw
+
+    li
+      display: flex
+      padding: 0 0.8vw
+      color: #eee
+      font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif
+      font-weight: 300
+
+      a
+        text-decoration: none
+        color: #eee
+
+#portfolio
+  height: 83vmin
+  width: 100%
+  background: #ddd
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-content: center
+  flex-wrap: wrap
+
+  .workframe
+    width: 33.33333333%
+    height: 42%
+    display: flex
+    justify-content: center
+    align-items: center
+    overflow: hidden
+    //box-shadow: 0px 3px 5px 2px #333
+
+    a
+      width: 100%
+      height: 100%
+      display: flex
+      flex-direction: column
+      text-decoration: none
+      color: black
+
+      &:hover
+
+        img
+          transform: scale(1.1)
+
+        .demo-image
+          height: 80%
+
+        .description
+          bottom: 0px
+          height: 20%
+
+      .description
+        display: flex
+        position: relative
+        bottom: -20%
+        height: 0px
+        width: 100%
+        background-color: #555555
+        transition: 0.5s
+
+        h4
+          color: #ddd
+          margin: auto
+
+      .demo-image
+        width: 100%
+        height: 100%
+        display: flex
+        transition: 0.5s
+
+        img
+          height: 60%
+          width: auto
+          max-width: 80%
+          margin: auto
+          transition: 0.5s
+
+  .frame-1
+    background-color: #ffffff
+
+  .frame-3
+    background-color: #cbccce
+
+    a
+      .demo-image
+        img
+          max-height: 27%
+
+  .frame-2
+    background-color: #444
+
+    a
+      .demo-image
+        img
+          max-height: 40%
+
+@media (max-width: 1120px)
+  #portfolio
+    height: 125vmin
+    .workframe
+      width: 50%
+      height: 31%
+
+@media (max-width: 600px)
+  #portfolio
+    height: 250vmin
+    .workframe
+      width: 100%
+      height: 16%
