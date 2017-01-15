@@ -14,8 +14,8 @@
 
     $('.menu-home').hover(function() {
       $('.menu-home-line').css({
-        'left': $(this).find('h4').offset().left - 15,
-        'width': $(this).find('h4').width() + 30,
+        'left': $(this).find('h4').offset().left - 25,
+        'width': $(this).find('h4').width() + 50,
         'opacity': 1.0
       });
     }, function() {
@@ -23,8 +23,8 @@
     });
     $('.menu-about').hover(function() {
       $('.menu-about-line').css({
-        'left': $(this).find('h4').offset().left - 16,
-        'width': $(this).find('h4').width() + 30,
+        'left': $(this).find('h4').offset().left - 25,
+        'width': $(this).find('h4').width() + 50,
         'opacity': 1.0
       });
     }, function() {
@@ -32,8 +32,8 @@
     });
     $('.menu-portfolio').hover(function() {
       $('.menu-portfolio-line').css({
-        'left': $(this).find('h4').offset().left - 15,
-        'width': $(this).find('h4').width() + 30,
+        'left': $(this).find('h4').offset().left - 25,
+        'width': $(this).find('h4').width() + 50,
         'opacity': 1.0
       });
     }, function() {
@@ -41,12 +41,25 @@
     });
     $('.menu-contact').hover(function() {
       $('.menu-contact-line').css({
-        'left': $(this).find('h4').offset().left - 15,
-        'width': $(this).find('h4').width() + 30,
+        'left': $(this).find('h4').offset().left - 25,
+        'width': $(this).find('h4').width() + 50,
         'opacity': 1.0
       });
     }, function() {
       $('.menu-contact-line').css('opacity', '0.0');
+    });
+
+    $('#upper-logo').hover(function() {
+      $('.beforeline').css("background","#19790a");
+    },
+    function() {
+      $('.beforeline').css('background', '#fff');
+    });
+    $('#lower-logo').hover(function() {
+      $('.afterline').css("background","#f5545c");
+    },
+    function() {
+      $('.afterline').css('background', '#fff');
     });
 
   })
