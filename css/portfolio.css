@@ -20,9 +20,9 @@ body {
 
 header {
   background: #111;
-  height: 9vmin; }
+  height: 10vmin; }
   header .header-area {
-    height: 7vmin;
+    height: 8vmin;
     padding-top: 1vmin;
     display: flex; }
     header .header-area .logo-area {
@@ -30,7 +30,7 @@ header {
       height: 100%;
       width: 30%; }
       header .header-area .logo-area .logo-line {
-        height: 10%;
+        height: 9%;
         width: 1000%;
         background: white;
         position: absolute;
@@ -40,6 +40,7 @@ header {
       header .header-area .logo-area .beforeline {
         left: 40%; }
       header .header-area .logo-area .afterline {
+        height: 9%;
         bottom: 0px;
         right: 60%; }
       header .header-area .logo-area .menu-line {
@@ -50,19 +51,31 @@ header {
         opacity: 0;
         transition: opacity 0.3s ease-in-out; }
       header .header-area .logo-area img {
+        position: absolute;
         height: 100%;
-        margin-left: 27%;
+        margin-left: 32.5%;
         -webkit-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out; }
         header .header-area .logo-area img:hover {
           -webkit-filter: brightness(46.7%);
           filter: brightness(46.7%); }
+      header .header-area .logo-area svg {
+        height: 100%;
+        margin-left: 32.5%; }
+        header .header-area .logo-area svg path {
+          transition: 0.5s ease-in-out; }
+        header .header-area .logo-area svg path:first-child:hover {
+          fill: #19790a; }
+        header .header-area .logo-area svg path:nth-child(2):hover {
+          fill: #f5545c; }
+        header .header-area .logo-area svg path:last-child:hover {
+          fill: #f77b37; }
     header .header-area ul {
       margin-top: 6px;
       margin-right: 4%;
       position: absolute;
       right: 0px;
-      height: 7vmin;
+      height: 8vmin;
       width: 45%;
       display: flex;
       list-style-type: none;
@@ -85,7 +98,7 @@ header {
             font-weight: 400; }
 
 .main {
-  height: 83vmin;
+  height: 82vmin;
   width: 100%;
   background: url("../images/macbook.jpg");
   background-size: cover;
@@ -112,7 +125,7 @@ footer {
         color: #eee; }
 
 #portfolio {
-  height: 83vmin;
+  height: 82vmin;
   width: 100%;
   background: #ddd;
   display: flex;
