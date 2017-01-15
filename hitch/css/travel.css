@@ -74,7 +74,7 @@ html {
           justify-content: center;
           align-content: center; }
           html body .header.fixed ul li img {
-            content: url("../images-hitch/hitch-logo-small.png");
+            content: url("../images/hitch-logo-small.png");
             width: 4vh;
             height: 4vh;
             margin-top: 1vh; }
@@ -118,7 +118,7 @@ html {
       padding-top: 10vmin;
       position: absolute; }
     #slideshow .slides .jumbo-1 {
-      background-image: url("../images-hitch/image-meet.jpg");
+      background-image: url("../images/image-meet.jpg");
       display: none; }
       #slideshow .slides .jumbo-1 .headline {
         position: absolute;
@@ -179,7 +179,7 @@ html {
             background: -moz-linear-gradient(top, #ff4a53, #f99ca1);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4a53', endColorstr='#f99ca1'); }
     #slideshow .slides .jumbo-2 {
-      background-image: url("../images-hitch/image-travel.jpeg");
+      background-image: url("../images/image-travel.jpeg");
       display: none; }
       #slideshow .slides .jumbo-2 .headline {
         box-sizing: border-box;
@@ -234,7 +234,7 @@ html {
           background: -moz-linear-gradient(top, #ff4a53, #f99ca1);
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4a53', endColorstr='#f99ca1'); }
     #slideshow .slides .jumbo-3 {
-      background-image: url("../images-hitch/image-app.jpg");
+      background-image: url("../images/image-app.jpg");
       display: flex;
       opacity: 0;
       flex-direction: row;
@@ -331,7 +331,7 @@ html {
             background: -moz-linear-gradient(top, #ff4a53, #f99ca1);
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4a53', endColorstr='#f99ca1'); }
     #slideshow .slides .jumbo-4 {
-      background-image: url("../images-hitch/image-app2.jpg");
+      background-image: url("../images/image-app2.jpg");
       display: none; }
       #slideshow .slides .jumbo-4 .headline {
         position: absolute;
@@ -444,7 +444,7 @@ html {
   position: absolute;
   top: 86vmin;
   z-index: 1;
-  background: url("../images-hitch/grey/grey_@2x.png");
+  background: url("../images/grey/grey_@2x.png");
   height: 94vmin;
   width: 100%;
   box-shadow: 0 0 7vmin rgba(0, 0, 0, 0.7); }
@@ -489,7 +489,7 @@ html {
   position: absolute;
   top: 180vmin;
   background-color: #eee;
-  background-image: url("../images-hitch/world-map-final.png");
+  background-image: url("../images/world-map-final.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -529,7 +529,7 @@ html {
   width: 100%;
   position: absolute;
   top: 274vmin;
-  background: url("../images-hitch/grey/grey_@2x.png");
+  background: url("../images/grey/grey_@2x.png");
   box-shadow: 0 0 7vmin rgba(0, 0, 0, 0.7); }
   #app-1 .section {
     display: flex;
@@ -573,7 +573,7 @@ html {
   width: 100%;
   position: absolute;
   top: 368vmin;
-  background: url("../images-hitch/offer-background-small.jpeg");
+  background: url("../images/offer-background-small.jpeg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -645,7 +645,7 @@ html {
   position: absolute;
   background-attachment: fixed;
   top: 462vmin;
-  background: url("../images-hitch/grey/grey_@2X.png");
+  background: url("../images/grey/grey_@2X.png");
   box-shadow: 0 0 7vmin black;
   z-index: 0; }
   #split ul {
@@ -666,7 +666,7 @@ html {
   width: 100%;
   top: 486vmin;
   position: absolute;
-  background: url("../images-hitch/image-footer.jpg");
+  background: url("../images/image-footer.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
