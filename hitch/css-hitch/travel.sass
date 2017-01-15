@@ -1,0 +1,839 @@
+@import '../mixins'
+
+*
+  padding: 0
+  margin: 0
+
+html
+  font-family: 'Libre Franklin', sans-serif
+  background: rgb(246,246,246)
+  overflow: auto
+
+  body
+    overflow-x: hidden
+
+    //opacity: 0
+
+    .header
+      width: 100%
+      height: 10vmin
+      display: flex
+      position: absolute
+      background: rgba(200,200,200,0.6)
+      z-index: 2
+
+      ul
+        height: 100%
+        margin: auto
+        font-size: 0
+        display: flex
+
+        li
+          display: flex
+          flex-direction: row
+          font-size: 0
+          height: 100%
+          text-align: center
+          justify-content: center
+          align-content: center
+
+          img
+            width: 9vmin
+            height: 9vmin
+            margin: 0.35vh 1.6vw 0
+            -webkit-transition: -webkit-transform 0.5s
+            transition: 0.5s
+
+          svg
+            margin: auto 2vw
+
+            g
+              fill: $red
+              transition: 0.5s
+
+            &:hover g
+              fill: rgba(50,50,50,0.5)
+
+          a
+            padding: 3.8vmin 2vw
+            color: white
+            font-size: 2vmin
+            text-decoration: none
+            text-align: center
+            transition: 0.5s
+
+            &:hover
+              color: rgba(50,50,50,0.5)
+
+          .logo-link
+            padding: 0
+
+    .header.fixed
+      width: 100%
+      height: 6.05vh
+      display: flex
+      position: fixed
+      background: rgba(200,200,200,0.9)
+      z-index: 2
+      transition: all 0.5s
+
+      ul
+        height: 100%
+        margin: auto
+        font-size: 0
+        display: flex
+
+        li
+          display: flex
+          flex-direction: row
+          font-size: 0
+          height: 100%
+          text-align: center
+          justify-content: center
+          align-content: center
+
+          img
+            content: url("../images-hitch/hitch-logo-small.png")
+            width: 4.0vh
+            height: 4.0vh
+            margin-top: 1vh
+
+          svg
+            height: 50%
+            margin: auto 2vw
+
+            g
+              fill: white
+              transition: 0.5s
+
+            &:hover g
+              fill: rgba(50,50,50,0.5)
+
+          a
+            padding: 1.95vh 2vw
+            color: white
+            font-size: 1.7vh
+            text-decoration: none
+            text-align: center
+            transition: 0.5s
+
+            &:hover
+              color: rgba(50,50,50,0.5)
+
+          .logo-link
+            padding: 0
+
+#slideshow
+  position: absolute
+  z-index: 0
+  width: 100%
+  height: 86vmin
+  overflow: hidden
+
+  .slides
+    height: 100%
+
+    .jumbotron
+      width: 100%
+      box-sizing: border-box
+      height: 100%
+      max-height: 100vh
+      background-attachment: fixed
+      background-position: center center
+      background-size: cover
+      z-index: 1
+      padding-top: 10vmin
+      position: absolute
+      //filter: blur(1px)
+
+    .jumbo-1
+      background-image: url("../images-hitch/image-meet.jpg")
+      display: none
+
+      .headline
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 76vmin
+        margin: auto
+        text-align: center
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        h1
+          display: flex
+          width: 100%
+          margin: 0 auto
+          max-width: 1250px
+          text-align: center
+          color: rgba(255,255,255,0.8)
+          font-size: calc(76vmin/7)
+
+        .button
+          @include button()
+          user-select: none
+          display: inline-flex
+          padding: 2vmin 5vmin
+          margin: 5vmin auto
+          font-size: calc((86vmin - 10vmin)/28)
+          font-family: 'Roboto', sans-serif
+          font-weight: 100
+          box-shadow: 2px 2px 5px 0px #555
+
+    .jumbo-2
+      background-image: url("../images-hitch/image-travel.jpeg")
+      display: none
+
+      .headline
+        box-sizing: border-box
+        padding-top: calc((86vmin - 10vmin)/8)
+        height: calc(86vmin - 10vmin)
+        width: 100%
+        position: absolute
+        right: 5%
+
+        h1
+          height: 20%
+          //margin: 4vh 0
+          font-size: calc((86vmin - 10vmin)/7)
+          text-align: right
+          color: rgba(255,255,255,0.8)
+
+      .button
+        @include button()
+        user-select: none
+        // border-radius: 15px
+        display: inline-block
+        padding: 2vmin 5vmin
+        margin: 5vmin 0 0 calc(76% - 7vmin)
+        font-size: calc((86vmin - 10vmin)/28)
+        font-family: 'Roboto', sans-serif
+        font-weight: 100
+        box-shadow: 2px 2px 5px 0px #555
+        // background: green
+        // border: 2px solid darken(green,10%)
+        // color: white
+
+    .jumbo-3
+      background-image: url("../images-hitch/image-app.jpg")
+      display: flex
+      opacity: 0
+      flex-direction: row
+      align-content: space-around
+      justify-content: center
+      height: 100%
+
+      .app-images
+        height: 90%
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        img
+          width: 60vmin
+          max-width: 40vw
+          height: auto
+          display: flex
+          margin: 3.2vmin 2vmin 2vmin
+          filter: drop-shadow(5px 5px 5px #222)
+          padding-right: 0.8vmin
+
+        .download-links
+          display: flex
+          flex-direction: row
+          justify-content: center
+
+          img
+            width: 25vmin
+            max-width: 17vw
+            height: 8vmin
+            max-height: calc(17vw/3.125)
+            margin: 0 0.3vmin
+
+      .headline
+        height: 76vmin
+        max-height: 500px
+        width: 60vmin
+        margin: auto 2vmin
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-content: center
+        text-align: center
+
+        h2
+          //display: flex
+          color: rgba(255,255,255,0.8)
+          font-size: calc(76vmin/15)
+          line-height: calc(76vmin/15)
+          text-align: left
+          height: 25%
+
+          span
+            color: #f5545c
+
+        h3
+          height: 18%
+          display: flex
+          color: rgba(255,255,255,0.8)
+          font-weight: 100
+          font-size: calc(76vmin/30)
+          text-align: left
+
+        .button
+          height: 4%
+          @include button()
+          user-select: none
+          display: inline-flex
+          padding: 2vmin 5vmin
+          margin: 0 auto
+          font-size: calc((86vmin - 10vmin)/28)
+          font-family: 'Roboto', sans-serif
+          font-weight: 100
+          box-shadow: 2px 2px 5px 0px #555
+
+    .jumbo-4
+      background-image: url("../images-hitch/image-app2.jpg")
+      display: none
+
+      .headline
+        position: absolute
+        bottom: 0
+        width: 100%
+        height: 76vmin
+        margin: auto
+        text-align: center
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        h1
+          display: flex
+          width: 100%
+          margin: 0 auto
+          max-width: 1250px
+          text-align: center
+          color: rgba(255,255,255,0.8)
+          font-size: calc(76vmin/9)
+
+        .button
+          @include button()
+          user-select: none
+          display: inline-flex
+          padding: 2vmin 5vmin
+          margin: 5vmin auto
+          font-size: calc((86vmin - 10vmin)/28)
+          font-family: 'Roboto', sans-serif
+          font-weight: 100
+          box-shadow: 2px 2px 5px 0px #555
+
+  .slide-select
+    height: 2vmin
+    width: 12.5vmin
+    position: absolute
+    display: flex
+    justify-content: space-between
+    flex-direction: row
+    right: 5vmin
+    bottom: 2vmin
+    //background: blue
+    z-index: 3
+
+    .select
+      width: 2vmin
+      height: 2vmin
+      background: rgba(200,200,200,0.7)
+      border-radius: 2vmin
+      box-sizing: border-box
+      box-shadow: 0px 0px 6px 0px #777
+      transition: background 0.5s
+
+      &:hover:not(.selected)
+        border: 3px solid rgba(200,200,200,0.7)
+        background: rgba(100, 100, 100, 0.7)
+
+    .selected
+      border: 3px solid rgba(100,220,200,0.7)
+      background: rgba(100,100,100,1.0)
+
+  .arrow-down
+    width: 4vmin
+    height: 4vmin
+    min-width: 20px
+    min-height: 20px
+    position: absolute
+    z-index: 3
+    bottom: 1.5vmin
+    left: 50%
+    -webkit-transform: translateX(-50%)
+    transform: translateX(-50%)
+
+    svg
+      //margin-left: 5px
+      width: 4vmin
+      height: 4vmin
+      min-width: 20px
+      min-height: 20px
+      border-radius: 3vmin
+      box-shadow: 0px 0px 5px rgba(0,0,0,0)
+      transition: 0.5s
+
+      g
+        transition: 0.5s
+
+      &:hover
+        box-shadow: 0px 0px 5px black
+
+#meet
+  display: flex
+  position: absolute
+  top: 86vmin
+  z-index: 1
+  background: url('../images-hitch/grey/grey_@2x.png')
+  height: 94vmin
+  width: 100%
+  box-shadow: 0 0 7vmin rgba(0, 0, 0, 0.7)
+
+  .section
+    display: flex
+    height: 100%
+    width: 95%
+    max-width: 1200px
+    margin: auto
+    flex-direction: row
+    justify-content: center
+    align-items: center
+
+    .section-image
+      width: 50%
+      box-sizing: border-box
+
+      img
+        height: auto
+        max-width: 100%
+
+    .text
+      display: flex
+      flex-direction: column
+      height: 68vmin
+      width: 50%
+      justify-content: center
+      padding-left: 2%
+
+      h1
+        font-size: 4.5vmin
+        color: #555
+
+      p
+        font-size: 2vmin
+        color: #555
+
+        span
+          color: #f5545c
+
+      h3
+        font-size: 3vmin
+        color: #f5545c
+        margin: 0 0 1vmin
+
+#travel
+  height: 94vmin
+  width: 100%
+  position: absolute
+  top: 180vmin
+  //background-color: #a3ccff
+  background-color: #eee
+  background-image: url('../images-hitch/world-map-final.png')
+  background-position: center
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-size: 100% auto
+  display: flex
+  flex-direction: column
+  justify-content: center
+  //filter: blur(2px)
+
+  h1
+    width: 80%
+    height: 20%
+    display: block
+    margin: 0 auto
+    text-align: center
+    font-size: calc(94vmax/15)
+    color: rgba(255,255,255,0.8)
+
+  .travel-text
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    color: rgba(255,255,255,0.8)
+    width: 90%
+    max-width: 1000px
+    margin: 0 auto
+
+    h2
+      margin: 1.2vh
+      color: rgba(255,255,255,0.9)
+
+    .paragraph
+      width: 20%
+      text-align: center
+      color: rgba(255,255,255,0.9)
+      background: rgba(0,0,0,0.2)
+      border-radius: 5vmin
+      padding: 3vmin
+
+#app-1
+  height: 94vmin
+  width: 100%
+  position: absolute
+  top: 274vmin
+  background: url('../images-hitch/grey/grey_@2x.png')
+  box-shadow: 0 0 7vmin rgba(0, 0, 0, 0.7)
+
+  .section
+    display: flex
+    height: 100%
+    width: 95%
+    max-width: 1200px
+    margin: auto
+    flex-direction: row
+    justify-content: space-between
+
+    .section-image
+      width: 50%
+      box-sizing: border-box
+
+      img
+        height: 69vmin
+        margin-top: 12.5vmin
+        margin-left: -2.5vmin
+
+    .text
+      display: flex
+      flex-direction: column
+      height: 68vmin
+      width: 46%
+      justify-content: center
+      margin-top: 13vmin
+      padding-left: 2%
+
+      h1
+        font-size: 4.5vmin
+        color: #555
+
+      p
+        font-size: 2vmin
+        color: #555
+        margin: 1vmin 0
+
+        span
+          color: #f5545c
+
+      h3
+        font-size: 3vmin
+        color: #f5545c
+        margin: 2vmin 0 0.5vmin
+
+#app-2
+  height: 94vmin
+  width: 100%
+  position: absolute
+  top: 368vmin
+  background: url('../images-hitch/offer-background-small.jpeg')
+  background-size: cover
+  background-position: center
+  background-attachment: fixed
+  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+  h1
+    font-size: 4.5vmin
+    display: flex
+    color: rgba(255,255,255,0.8)
+
+  .offers
+    width: 95%
+    height: 80%
+    max-width: 1250px
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    margin: 0 auto
+
+    .left-offers
+      width: 30%
+      height: 69vmin
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+
+    .feature
+      text-align: right
+      height: 33%
+      color: white
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-end
+
+      .title
+        display: flex
+
+        .hostel
+          margin-left: 1vmin
+
+        svg
+          height: 6vmin
+          margin-bottom: 1vmin
+
+      h3
+        display: flex
+        text-align: right
+        line-height: 6vmin
+        margin-bottom: 1vmin
+        font-size: 2.2vmin
+
+      p
+        font-size: 1.75vmin
+
+    .right-offers
+      width: 30%
+      height: 69vmin
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+
+      .feature
+        text-align: left
+        align-items: flex-start
+
+        .walking, .drinks
+          margin-left: 1vmin
+
+    img
+      height: 69vmin
+      //width: 20%
+      margin: 0 1.5vw
+
+#split
+  height: 24vmin
+  width: 100%
+  position: absolute
+  background-attachment: fixed
+  top: 462vmin
+  background: url('../images-hitch/grey/grey_@2X.png')
+  box-shadow: 0 0 7vmin rgba(0, 0, 0, 1.0)
+  z-index: 0
+
+  ul
+    height: 18vmin
+    width: 80%
+    display: flex
+    margin: 3.2vmin auto auto auto
+    justify-content: space-between
+    align-items: center
+
+    li
+      display: inline-block
+      width: 15%
+
+      img
+        width: 100%
+
+#footer
+  height: 94vmin
+  width: 100%
+  top: 486vmin
+  position: absolute
+  background: url('../images-hitch/image-footer.jpg')
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  background-attachment: fixed
+  z-index: -1
+
+  .main-footer
+    height: 82vmin
+    width: 90%
+    max-width: 1300px
+    margin: 0 auto
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .app-images
+      height: 90%
+      width: 50%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      //margin-right: 1.5vmin
+      align-items: center
+
+      img
+        width: 60vmin
+        max-width: 40vw
+        height: auto
+        display: flex
+        margin-bottom: 3.2vmin
+        filter: drop-shadow(5px 5px 5px #222)
+        padding-right: 0.8vmin
+
+      .download-links
+        display: flex
+        flex-direction: row
+        justify-content: center
+
+        img
+          width: 25vmin
+          max-width: 17vw
+          height: 8vmin
+          max-height: calc(17vw/3.125)
+          margin: 0 0.3vmin
+
+    .newsletter
+      height: 70%
+      width: 50%
+      margin-left: 1.5vmin
+      padding-left: 0.5vmin
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+
+      span
+        color: $red
+
+      h1
+        font-size: 6vmin
+        color: rgba(255,255,255,0.8)
+
+      p
+        color: rgba(255,255,255,0.8)
+        font-size: 3vmin
+
+        span
+          color: $red
+
+      .form
+        display: flex
+        flex-direction: row
+
+        input
+          width: 70%
+          font-size: 3vmin
+          line-height: 4vmin
+          box-sizing: border-box
+          font-family: 'Libre Franklin', sans-serif
+          padding-left: 1vmin
+          transition: 0.5s
+          color: rgba(0,0,0,0.6)
+
+          &:hover
+            box-shadow: 0 0 5px rgba(245,84,92,0.4)
+            border: 2px solid rgba(245,84,92,0.4)
+
+          &:focus
+            box-shadow: 0 0 5px rgba(245,84,92,0.7)
+            border: 2px solid rgba(245,84,92,0.7)
+            outline: none
+
+        .subscribe
+          background: $red
+
+          h3
+            color: white
+            font-weight: 100
+            font-size: 2vmin
+            line-height: 4vmin
+            padding: 0 2vmin
+
+  .links
+    display: flex
+    height: 12vmin
+    width: 95%
+    max-width: 1350px
+    margin: 0 auto
+    //background: rgba(100,100,100,0.5)
+    align-items: center
+    justify-content: space-between
+
+    h4
+      width: 30%
+      color: white
+      font-weight: 100
+      font-size: 1.8vmin
+      text-align: center
+
+    .disclaimer
+      color: white
+      font-size: 1vmin
+
+    ul
+      display: flex
+      width: 30%
+      justify-content: center
+      align-items: center
+
+      li
+        display: inline-block
+        padding: 0 2vmin
+        color: white
+        font-weight: 100
+        font-size: 1.8vmin
+
+        svg
+          width: 2.8vmin
+
+        .instagram
+          width: 2.2vmin
+
+
+.animation-element
+  opacity: 0
+  position: relative
+
+.animation-element.slide-up
+  opacity: 0
+  -moz-transition: all 600ms ease-out
+  -webkit-transition: all 600ms ease-out
+  -o-transition: all 600ms ease-out
+  transition: all 600ms ease-out
+  -moz-transform: translate3d(0px, 20vh, 0px)
+  -webkit-transform: translate3d(0px, 20vh, 0px)
+  -o-transform: translate(0px, 20vh)
+  -ms-transform: translate(0px, 20vh)
+  transform: translate3d(0px, 20vh, 0px)
+
+.animation-element.slide-up.in-view
+  opacity: 1
+  -moz-transform: translate3d(0px, 0px, 0px)
+  -webkit-transform: translate3d(0px, 0px, 0px)
+  -o-transform: translate(0px, 0px)
+  -ms-transform: translate(0px, 0px)
+  transform: translate3d(0px, 0px, 0px)
+
+.animation-element.grow-larger
+  opacity: 0
+  -moz-transition: all 600ms cubic-bezier(0.175, 0.885, 0.320, 1.275)
+  -webkit-transition: all 600ms cubic-bezier(0.175, 0.885, 0.320, 1.275)
+  -o-transition: all 600ms cubic-bezier(0.175, 0.885, 0.320, 1.275)
+  transition: all 600ms cubic-bezier(0.175, 0.885, 0.320, 1.275)
+  -moz-transform: scale(0.01)
+  -webkit-transform: scale(0.01)
+  -o-transform: scale(0.01)
+  -ms-transform: scale(0.01)
+  transform: scale(0.01)
+
+.animation-element.grow-larger.in-view
+  opacity: 1
+  -moz-transform: scale(1.0)
+  -webkit-transform: scale(1.0)
+  -o-transform: scale(1.0)
+  -ms-transform: scale(1.0)
+  transform: scale(1.0)

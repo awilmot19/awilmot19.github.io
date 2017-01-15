@@ -1,0 +1,251 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  background: #111; }
+
+body {
+  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #111;
+  background-color: #fff;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+  -moz-font-feature-settings: "kern" 1;
+  -o-font-feature-settings: "kern" 1;
+  font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  min-width: 1184px; }
+
+.snow-splash {
+  height: 7vh;
+  min-height: 45px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #111;
+  background-image: url("../images-ski/snow-splash4.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+
+header {
+  width: 100%;
+  background: #111; }
+  header .header-area {
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    background: #111;
+    height: 8vh;
+    min-height: 56px; }
+    header .header-area img {
+      height: 8vh;
+      min-height: 55px;
+      margin-left: 2%;
+      margin-top: 1vh; }
+    header .header-area ul {
+      margin: auto 0 auto auto;
+      height: 9.4vh;
+      width: 45%;
+      display: flex;
+      margin-left: auto;
+      list-style-type: none;
+      align-content: space-around; }
+      header .header-area ul li {
+        display: flex;
+        flex-grow: 1;
+        height: 100%; }
+        header .header-area ul li a {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          color: white;
+          text-decoration: none; }
+          header .header-area ul li a:hover {
+            color: #F77B37; }
+          header .header-area ul li a h4 {
+            margin: auto;
+            font-weight: 200; }
+
+.title-area {
+  height: 9vh;
+  width: 100%;
+  max-width: 1330px;
+  margin: -2vh auto 0 auto;
+  background: #fff;
+  min-height: 64px;
+  display: flex;
+  flex-direction: row; }
+  .title-area h1 {
+    width: 35%;
+    display: flex;
+    margin: auto;
+    font-weight: 200; }
+  .title-area form {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    width: 65%;
+    align-content: space-between; }
+    .title-area form h3 {
+      margin: auto;
+      font-size: 20px;
+      font-weight: 200;
+      margin-left: 1.5vw; }
+    .title-area form h3:first-child {
+      margin-left: 0vw; }
+    .title-area form select {
+      margin: auto;
+      font-size: 15px;
+      height: 28px;
+      line-height: 28px;
+      background: #f4f4f4;
+      box-shadow: 2px 2px 5px #222; }
+      .title-area form select:focus {
+        outline: none; }
+@-moz-document url-prefix() {
+  .title-area form select {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px; } }
+    .title-area form button {
+      margin: auto;
+      margin-left: 1.5vw;
+      background: #0067B1;
+      border: 1px solid black;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px #222;
+      padding: 0 10px;
+      height: 28px;
+      font-size: 15px;
+      color: #eee;
+      text-transform: uppercase;
+      transition: 0.5s; }
+      .title-area form button:hover {
+        transform: translate(0px, -2px) scale(1.02);
+        background: #005bb9;
+        box-shadow: 4px 4px 7px rgba(32, 32, 32, 0.7); }
+      .title-area form button:focus {
+        outline: none; }
+      .title-area form button:active {
+        transform: translate(0px, 3px) scale(0.98); }
+
+.main-images {
+  display: flex;
+  width: 100%;
+  height: 78vh;
+  min-height: 490px;
+  overflow: hidden; }
+  .main-images .dest-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 20%;
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 0.5s;
+    filter: grayscale(100%);
+    transition: all 0.5s; }
+    .main-images .dest-image:hover {
+      -webkit-filter: none;
+      filter: none; }
+    .main-images .dest-image .book-button {
+      background: #F77B37;
+      display: flex;
+      text-align: center;
+      position: absolute;
+      z-index: 3;
+      width: 100%;
+      bottom: -8vh;
+      height: 8vh; }
+      .main-images .dest-image .book-button a {
+        color: white;
+        text-decoration: none;
+        margin: auto;
+        font-weight: 300;
+        font-size: 2.5vh;
+        transition: 0.5s; }
+        .main-images .dest-image .book-button a:hover {
+          color: #fcccb2; }
+  .main-images .image-1 {
+    background: url("../images-ski/main-yukon-edited.jpg") center center no-repeat;
+    background-size: cover; }
+  .main-images .image-2 {
+    background: url("../images-ski/main-bella-edited.jpg") center center no-repeat;
+    background-size: cover; }
+  .main-images .image-3 {
+    background: url("../images-ski/main-alberta-edited.jpg") center center no-repeat;
+    background-size: cover; }
+  .main-images .image-4 {
+    background: url("../images-ski/main-ontario-edited.jpeg") center center no-repeat;
+    background-size: cover; }
+  .main-images .image-5 {
+    background: url("../images-ski/main-tremblant-edited.jpg") center center no-repeat;
+    background-size: cover; }
+  .main-images .image-6 {
+    width: 16.7%;
+    background: url("../images-ski/main-atlantic.jpg") center center no-repeat;
+    background-size: cover;
+    background-position: -16vw; }
+  .main-images .prov-logo {
+    height: 7vh;
+    width: auto;
+    min-height: 50px; }
+  .main-images .ontario {
+    height: 5vh;
+    padding-top: 0.7vh; }
+  .main-images .quebec {
+    height: 6vh;
+    padding-top: 0.3vh; }
+  .main-images h2 {
+    color: white;
+    text-shadow: -1px -1px 2px #000, 1px -1px 2px #000, -1px 1px 2px #000, 1px 1px 2px #000;
+    margin: 17% auto;
+    text-align: center;
+    font: 30px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    padding: 1vh 2vw;
+    border-radius: 0.8vh;
+    text-transform: uppercase;
+    transition: 0.5s; }
+  .main-images h5 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 7.5vh;
+    width: 100%;
+    text-align: center;
+    font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    padding: 10px 0px;
+    background: rgba(230, 230, 230, 0.7);
+    color: #444;
+    opacity: 0;
+    transition: 0.5s; }
+  .main-images img {
+    width: 80%;
+    margin: 50px auto -30px; }
+
+footer {
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  min-height: 60px;
+  background: #111; }
+  footer ul {
+    display: flex;
+    height: 1.5vh;
+    margin: auto 2vw; }
+    footer ul li {
+      display: flex;
+      padding: 0 0.8vw;
+      color: #eee;
+      font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 300; }
+      footer ul li a {
+        text-decoration: none;
+        color: #eee; }
+
+/*# sourceMappingURL=skistyle.css.map */

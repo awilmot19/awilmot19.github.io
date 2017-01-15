@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="css/skistyle.css">
+</head>
+
+<header>
+  <div class="header-area">
+    <a href="#"><img src="images-ski/ski-logo.png"></a>
+    <ul>
+      <li><a href="#"><h4>SKI</h4></a></li>
+      <li><a href="#"><h4>EAT</h4></a></li>
+      <li><a href="#"><h4>VISIT</h4></a></li>
+      <li><a href="#"><h4>BOOK</h4></a></li>
+      <li><a href="#"><h4>ABOUT</h4></a></li>
+      <li><a href="#"><h4>CONTACT</h4></a></li>
+      <li><a href="#"><h4>SEARCH</h4></a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="snow-splash"></div>
+
+<body>
+
+  <div class="title-area">
+    <h1>BOOK YOUR TRIP TODAY:</h1>
+    <form action="action_page.php">
+      <h3>Number of people:</h3>
+      <select name="num-people">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6+">6+</option>
+      </select>
+      <h3>Number of days:</h3>
+      <select name="num-days">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6+</option>
+      </select>
+      <h3>Location:</h3>
+      <select name="location">
+        <option value="">Choose One</option>
+        <option value="1">Yukon</option>
+        <option value="2">British Columbia</option>
+        <option value="3">Alberta</option>
+        <option value="4">Ontario</option>
+        <option value="5">Quebec</option>
+      </select>
+      <button type="button" onclick="return false;">FIND RATES</button>
+    </form>
+  </div>
+
+  <div class="main-images">
+    <div class="dest-image image-1">
+      <img src="images-ski/black-diamond.png">
+      <img class="prov-logo" src="images-ski/logo-yukon-edited-white.png">
+      <h5>Mount Sima, Whitehorse, YT</h5>
+      <div class="book-button"><a href="#">EXPLORE MORE</a></div>
+    </div>
+    <div class="dest-image image-2">
+      <img src="images-ski/2black-diamond.png">
+      <img class="prov-logo" src="images-ski/logo-bc-edited-white.png">
+      <h5>Silver Star, Silver Star, BC</h5>
+      <div class="book-button"><a href="#">EXPLORE MORE</a></div>
+    </div>
+    <div class="dest-image image-3">
+      <img src="images-ski/blue-square.png">
+      <img class="prov-logo" src="images-ski/logo-alberta-edited-white.png">
+      <h5>Sunshine Village, Banff, AB</h5>
+      <div class="book-button"><a href="#">EXPLORE MORE</a></div>
+    </div>
+    <div class="dest-image image-4">
+      <img src="images-ski/green-circle.png">
+      <img class="prov-logo ontario" src="images-ski/logo-ontario-edited-white-small.png">
+      <h5>Blue Mountain, Collingwood, ON</h5>
+      <div class="book-button"><a href="#">EXPLORE MORE</a></div>
+    </div>
+    <div class="dest-image image-5">
+      <img src="images-ski/blue-square.png">
+      <img class="prov-logo quebec" src="images-ski/logo-quebec-edited-white.png">
+      <h5>Mont Tremblant, Mont-Tremblant, QC</h5>
+      <div class="book-button"><a href="#">EXPLORE MORE</a></div>
+    </div>
+  </div>
+
+</body>
+
+<footer>
+  <ul>
+    <li>&copy; Andy Wilmot Designs</li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Help</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Terms</a></li>
+  </ul>
+</footer>
+
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+    $('.dest-image').hover(function() {
+      //$(this).children('h2').css('background', 'rgba(247, 123, 55, 0.8)');
+      $(this).children('h5').css('opacity', '1.0');
+      //var picIndex = $('.dest-image').index(this);
+      $(this).children('.book-button').stop().animate({
+        bottom: '-0.5vh'
+      }, 500);
+    }, function() {
+      //$(this).children('h2').css('background', 'none');
+      $(this).children('h5').css('opacity', '0.0');
+      //var picIndex = $('.dest-image').index(this);
+      $(this).children('.book-button').stop().animate({
+        bottom: '-9vh'
+      }, 500);
+    });
+  });
+
+
+</script>
+
+</html>
