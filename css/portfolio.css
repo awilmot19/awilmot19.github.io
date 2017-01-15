@@ -181,11 +181,19 @@ footer {
   #portfolio .frame-3 {
     background-color: #cbccce; }
     #portfolio .frame-3 a .demo-image img {
-      max-height: 27%; }
+      height: 27%; }
   #portfolio .frame-2 {
     background-color: #444; }
     #portfolio .frame-2 a .demo-image img {
-      max-height: 40%; }
+      height: 40%; }
+  #portfolio .frame-4 {
+    background-color: #1493ff; }
+    #portfolio .frame-4 a .demo-image img {
+      height: 30%; }
+  #portfolio .frame-5 {
+    background-color: #d76e02; }
+    #portfolio .frame-5 a .demo-image img {
+      height: 55%; }
 
 @media (max-width: 1120px) {
   #portfolio {
