@@ -444,7 +444,7 @@ html {
   position: absolute;
   top: 86vmin;
   z-index: 1;
-  background: url("../images/grey/grey_@2x.png");
+  background: url("../images/grey/grey_@2X.png");
   height: 94vmin;
   width: 100%;
   box-shadow: 0 0 7vmin rgba(0, 0, 0, 0.7); }
@@ -529,7 +529,7 @@ html {
   width: 100%;
   position: absolute;
   top: 274vmin;
-  background: url("../images/grey/grey_@2x.png");
+  background: url("../images/grey/grey_@2X.png");
   box-shadow: 0 0 7vmin rgba(0, 0, 0, 0.7); }
   #app-1 .section {
     display: flex;
