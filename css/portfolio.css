@@ -65,7 +65,7 @@ header {
         header .header-area .logo-area svg path {
           transition: 0.5s ease-in-out; }
         header .header-area .logo-area svg path:first-child:hover {
-          fill: #19790a; }
+          fill: #1493ff; }
         header .header-area .logo-area svg path:nth-child(2):hover {
           fill: #f5545c; }
         header .header-area .logo-area svg path:last-child:hover {
