@@ -25,7 +25,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #111;
-  background-image: url("../images-ski/snow-splash4.png");
+  background-image: url("../images/snow-splash4.png");
   background-repeat: no-repeat;
   background-size: 100% 100%; }
 
@@ -168,23 +168,23 @@ header {
         .main-images .dest-image .book-button a:hover {
           color: #fcccb2; }
   .main-images .image-1 {
-    background: url("../images-ski/main-yukon-edited.jpg") center center no-repeat;
+    background: url("../images/main-yukon-edited.jpg") center center no-repeat;
     background-size: cover; }
   .main-images .image-2 {
-    background: url("../images-ski/main-bella-edited.jpg") center center no-repeat;
+    background: url("../images/main-bella-edited.jpg") center center no-repeat;
     background-size: cover; }
   .main-images .image-3 {
-    background: url("../images-ski/main-alberta-edited.jpg") center center no-repeat;
+    background: url("../images/main-alberta-edited.jpg") center center no-repeat;
     background-size: cover; }
   .main-images .image-4 {
-    background: url("../images-ski/main-ontario-edited.jpeg") center center no-repeat;
+    background: url("../images/main-ontario-edited.jpeg") center center no-repeat;
     background-size: cover; }
   .main-images .image-5 {
-    background: url("../images-ski/main-tremblant-edited.jpg") center center no-repeat;
+    background: url("../images/main-tremblant-edited.jpg") center center no-repeat;
     background-size: cover; }
   .main-images .image-6 {
     width: 16.7%;
-    background: url("../images-ski/main-atlantic.jpg") center center no-repeat;
+    background: url("../images/main-atlantic.jpg") center center no-repeat;
     background-size: cover;
     background-position: -16vw; }
   .main-images .prov-logo {
