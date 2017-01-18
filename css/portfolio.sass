@@ -16,52 +16,63 @@ body
   -o-font-feature-settings: "kern" 1
   font-feature-settings: "kern" 1
   font-kerning: normal
-  //overflow: hidden
-  //min-width: 1184px
   width: 100%
-  //overflow: hidden
 
 header
   background: #111
-  height: 9vmin
+  height: 10vmin
 
   .header-area
-    height: 7vmin
+    height: 8vmin
     padding-top: 1vmin
     display: flex
+    position: relative
+
+    .logo-line
+      height: 8.5%
+      //width: 1000%
+      background: white
+      position: absolute
+      // transition: background 0.5s ease-in-out
+      // -webkit-transition: background 0.5s ease-in-out
+      // -moz-transition: background 0.5s ease-in-out
+
+    .beforeline
+      left: 100%
+      width: calc(88% - 4vmin)
+      transition: transform 1.0s ease-in-out, background 0.5s ease-in-out
+
+    .loaded-before
+      left: calc(12% + 4vmin)
+
+    .afterline
+      height: 8.45%
+      bottom: 0px
+      right: 100%
+      width: calc(12% + 4vmin)
+      transition: transform 1.0s ease-in-out, background 0.5s ease-in-out
+
+    .loaded-after
+      right: calc(88% - 4vmin)
+
+    .menu-line
+      position: absolute
+      background: #777
+      height: 10%
+      //width: 39px
+      opacity: 0
+      transition: opacity 0.3s ease-in-out
 
     .logo-area
       position: relative
       height: 100%
-      width: 30%
-
-      .logo-line
-        height: 10%
-        width: 1000%
-        background: white
-        position: absolute
-        transition: background 0.5s ease-in-out
-        -webkit-transition: background 0.5s ease-in-out
-        -moz-transition: background 0.5s ease-in-out
-
-      .beforeline
-        left: 40%
-
-      .afterline
-        bottom: 0px
-        right: 60%
-
-      .menu-line
-        position: absolute
-        background: #777
-        height: 9%
-        width: 39px
-        opacity: 0.0
-        transition: opacity 0.3s ease-in-out
+      width: 8vmin
+      margin-left: 12%
 
       img
+        position: absolute
         height: 100%
-        margin-left: 27%
+        margin-left: 50%
         -webkit-transition: all 0.5s ease-in-out
         transition: all 0.5s ease-in-out
 
@@ -69,16 +80,36 @@ header
           -webkit-filter: brightness(46.7%)
           filter: brightness(46.7%)
 
+      svg
+        display: none
+        height: 100%
+        margin-left: 0
+
+        path
+          transition: fill 0.5s ease-in-out
+          border-top: 5px solid red
+
+          // &:first-child:hover
+          //   fill: #1493ff
+
+          // &:nth-child(2):hover
+          //   fill: #f5545c
+
+          &:last-child:hover
+            fill: #f77b37
+
+      @keyframes draw
+        to
+          stroke-dashoffset: 0
+
     ul
-      //margin: auto 0 auto auto
       margin-top: 6px
       margin-right: 4%
       position: absolute
       right: 0px
-      height: 7vmin
+      height: 8vmin
       width: 45%
       display: flex
-      //margin-left: auto
       list-style-type: none
       align-content: space-around
 
@@ -102,10 +133,28 @@ header
             margin: auto
             font-weight: 400
 
+.clip-down
+  animation: slideDown 3s linear
+
+.clip-up
+  animation: slideUp 3s linear
+
+@keyframes slideDown
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(0.01px)
+
+@keyframes slideUp
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(0.01px)
+
 .main
-  height: 83vmin
+  height: 82vmin
   width: 100%
-  background: url('../images/macbook.jpg')
+  background: url("../images/macbook.jpg")
   background-size: cover
   background-position: center
 
@@ -133,7 +182,7 @@ footer
         color: #eee
 
 #portfolio
-  height: 83vmin
+  height: 82vmin
   width: 100%
   background: #ddd
   display: flex
@@ -143,13 +192,12 @@ footer
   flex-wrap: wrap
 
   .workframe
-    width: 33.33333333%
+    width: 33.33333%
     height: 42%
     display: flex
     justify-content: center
     align-items: center
     overflow: hidden
-    //box-shadow: 0px 3px 5px 2px #333
 
     a
       width: 100%
@@ -203,18 +251,26 @@ footer
   .frame-3
     background-color: #cbccce
 
-    a
-      .demo-image
-        img
-          max-height: 27%
+    a .demo-image img
+      height: 27%
 
   .frame-2
     background-color: #444
 
-    a
-      .demo-image
-        img
-          max-height: 40%
+    a .demo-image img
+      height: 40%
+
+  .frame-4
+    background-color: #1493ff
+
+    a .demo-image img
+      height: 30%
+
+  .frame-5
+    background-color: #d76e02
+
+    a .demo-image img
+      height: 55%
 
 @media (max-width: 1120px)
   #portfolio

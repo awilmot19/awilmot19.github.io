@@ -24,52 +24,58 @@ header {
   header .header-area {
     height: 8vmin;
     padding-top: 1vmin;
-    display: flex; }
+    display: flex;
+    position: relative; }
+    header .header-area .logo-line {
+      height: 8.5%;
+      background: white;
+      position: absolute; }
+    header .header-area .beforeline {
+      left: 100%;
+      width: calc(88% - 4vmin);
+      transition: transform 1s ease-in-out, background 0.5s ease-in-out; }
+    header .header-area .loaded-before {
+      left: calc(12% + 4vmin); }
+    header .header-area .afterline {
+      height: 8.45%;
+      bottom: 0px;
+      right: 100%;
+      width: calc(12% + 4vmin);
+      transition: transform 1s ease-in-out, background 0.5s ease-in-out; }
+    header .header-area .loaded-after {
+      right: calc(88% - 4vmin); }
+    header .header-area .menu-line {
+      position: absolute;
+      background: #777;
+      height: 10%;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out; }
     header .header-area .logo-area {
       position: relative;
       height: 100%;
-      width: 30%; }
-      header .header-area .logo-area .logo-line {
-        height: 9%;
-        width: 1000%;
-        background: white;
-        position: absolute;
-        transition: background 0.5s ease-in-out;
-        -webkit-transition: background 0.5s ease-in-out;
-        -moz-transition: background 0.5s ease-in-out; }
-      header .header-area .logo-area .beforeline {
-        left: 40%; }
-      header .header-area .logo-area .afterline {
-        height: 9%;
-        bottom: 0px;
-        right: 60%; }
-      header .header-area .logo-area .menu-line {
-        position: absolute;
-        background: #777;
-        height: 9%;
-        width: 39px;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out; }
+      width: 8vmin;
+      margin-left: 12%; }
       header .header-area .logo-area img {
         position: absolute;
         height: 100%;
-        margin-left: 32.5%;
+        margin-left: 50%;
         -webkit-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out; }
         header .header-area .logo-area img:hover {
           -webkit-filter: brightness(46.7%);
           filter: brightness(46.7%); }
       header .header-area .logo-area svg {
+        display: none;
         height: 100%;
-        margin-left: 32.5%; }
+        margin-left: 0; }
         header .header-area .logo-area svg path {
-          transition: 0.5s ease-in-out; }
-        header .header-area .logo-area svg path:first-child:hover {
-          fill: #1493ff; }
-        header .header-area .logo-area svg path:nth-child(2):hover {
-          fill: #f5545c; }
-        header .header-area .logo-area svg path:last-child:hover {
-          fill: #f77b37; }
+          transition: fill 0.5s ease-in-out;
+          border-top: 5px solid red; }
+          header .header-area .logo-area svg path:last-child:hover {
+            fill: #f77b37; }
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0; } }
     header .header-area ul {
       margin-top: 6px;
       margin-right: 4%;
@@ -97,6 +103,22 @@ header {
             margin: auto;
             font-weight: 400; }
 
+.clip-down {
+  animation: slideDown 3s linear; }
+
+.clip-up {
+  animation: slideUp 3s linear; }
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(0.01px); } }
+@keyframes slideUp {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(0.01px); } }
 .main {
   height: 82vmin;
   width: 100%;

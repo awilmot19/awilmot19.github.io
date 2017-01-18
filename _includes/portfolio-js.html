@@ -5,14 +5,27 @@
 
   $(document).ready(function() {
 
-    $('.main-logo').hover(function() {
-      $('.logo-line').css('background', '#777');
-    },
-    function() {
-      $('.logo-line').css('background', '#fff');
-    });
+    //$('#square-clip-down>path').addClass
+    $('.main-logo').hide();
+    setTimeout(function() {
+      $('.main-logo').show();
+    }, 1040);
+
+    setTimeout(function() {
+      $('g').removeAttr("clip-path");
+    }, 2800);
+
+    $('.beforeline').css('transform', 'translateX(-100%)');
+    //$('.afterline').addClass('loaded-after');
+    $('.afterline').css('transform', 'translateX(100%)');
+    //$('.main-logo').delay(1000).fadeIn(1500);
+    setTimeout(function() {
+      $('.main-logo').addClass('load');
+    }, 500);
 
     $('.menu-home').hover(function() {
+      console.log($(this).find('h4').offset().left);
+      console.log($('.menu-home-line'));
       $('.menu-home-line').css({
         'left': $(this).find('h4').offset().left - 25,
         'width': $(this).find('h4').width() + 50,
@@ -22,6 +35,7 @@
       $('.menu-home-line').css('opacity', '0.0');
     });
     $('.menu-about').hover(function() {
+      console.log($(this).find('h4').offset().left);
       $('.menu-about-line').css({
         'left': $(this).find('h4').offset().left - 25,
         'width': $(this).find('h4').width() + 50,
@@ -31,6 +45,7 @@
       $('.menu-about-line').css('opacity', '0.0');
     });
     $('.menu-portfolio').hover(function() {
+      console.log($(this).find('h4').offset().left);
       $('.menu-portfolio-line').css({
         'left': $(this).find('h4').offset().left - 25,
         'width': $(this).find('h4').width() + 50,
@@ -40,6 +55,7 @@
       $('.menu-portfolio-line').css('opacity', '0.0');
     });
     $('.menu-contact').hover(function() {
+      console.log($(this).find('h4').offset().left);
       $('.menu-contact-line').css({
         'left': $(this).find('h4').offset().left - 25,
         'width': $(this).find('h4').width() + 50,
@@ -49,17 +65,21 @@
       $('.menu-contact-line').css('opacity', '0.0');
     });
 
-    $('#upper-logo').hover(function() {
-      $('.beforeline').css("background","#1493ff");
+    $('#upper-logo, .beforeline, .menu-line').hover(function() {
+      $('.beforeline').css("background-color","#1493ff");
+      $('#upper-logo').css("fill","#1493ff");
     },
     function() {
-      $('.beforeline').css('background', '#fff');
+      $('.beforeline').css('background-color', '#fff');
+      $('#upper-logo').css("fill","#fff");
     });
-    $('#lower-logo').hover(function() {
-      $('.afterline').css("background","#f5545c");
+    $('#lower-logo, .afterline').hover(function() {
+      $('.afterline').css("background-color","#f5545c");
+      $('#lower-logo').css("fill","#f5545c");
     },
     function() {
-      $('.afterline').css('background', '#fff');
+      $('.afterline').css('background-color', '#fff');
+      $('#lower-logo').css("fill","#fff");
     });
 
   })
