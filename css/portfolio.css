@@ -223,7 +223,7 @@ footer {
     #portfolio .workframe {
       width: 50%;
       height: 31%; } }
-@media (max-width: 600px) {
+@media (max-width: 641px) {
   .logo-line {
     display: none; }
 
