@@ -193,13 +193,14 @@ footer {
         width: 100%;
         height: 100%;
         display: flex;
-        transition: 0.5s; }
+        transition: 0.5s;
+        align-items: center;
+        justify-content: center; }
         #portfolio .workframe a .demo-image img {
           height: 60%;
           width: auto;
           max-width: 80%;
           display: block;
-          margin: auto;
           transition: 0.5s; }
   #portfolio .frame-1 {
     background-color: #ffffff; }
