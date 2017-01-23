@@ -1,247 +1,61 @@
-* {
-  padding: 0;
-  margin: 0; }
+/*
+Error: Invalid CSS after "and ": expected selector, was "(min-device-wid..."
+        on line 283 of portfolio.sass
 
-html {
-  -webkit-font-smoothing: antialiased;
-  background: #111; }
+278:     .workframe
+279:       width: 50%
+280:       height: 31%
+281: 
+282: @media only screen
+283: and (min-device-width : 320px)
+284: and (max-device-width : 568px)
+285:   .logo-line
+286:     display: none
+287: 
+288:   header
 
-body {
-  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #111;
-  background-color: #fff;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
-  font-kerning: normal;
-  width: 100%; }
-
-header {
-  background: #111;
-  height: 10vmin; }
-  header .header-area {
-    height: 8vmin;
-    padding-top: 1vmin;
-    display: flex;
-    position: relative; }
-    header .header-area .logo-line {
-      height: 8.5%;
-      background: white;
-      position: absolute; }
-    header .header-area .beforeline {
-      left: 100%;
-      width: calc(88% - 4vmin);
-      transition: transform 1s ease-in-out, background 0.5s ease-in-out; }
-    header .header-area .loaded-before {
-      left: calc(12% + 4vmin); }
-    header .header-area .afterline {
-      height: 8.45%;
-      bottom: 0px;
-      right: 100%;
-      width: calc(12% + 4vmin);
-      transition: transform 1s ease-in-out, background 0.5s ease-in-out; }
-    header .header-area .loaded-after {
-      right: calc(88% - 4vmin); }
-    header .header-area .menu-line {
-      position: absolute;
-      background: #777;
-      height: 10%;
-      opacity: 0;
-      transition: opacity 0.3s ease-in-out; }
-    header .header-area .logo-area {
-      position: relative;
-      height: 100%;
-      width: 8vmin;
-      margin-left: 12%; }
-      header .header-area .logo-area img {
-        position: absolute;
-        height: 100%;
-        margin-left: 50%;
-        -webkit-transition: all 0.5s ease-in-out;
-        transition: all 0.5s ease-in-out; }
-        header .header-area .logo-area img:hover {
-          -webkit-filter: brightness(46.7%);
-          filter: brightness(46.7%); }
-      header .header-area .logo-area svg {
-        display: none;
-        height: 100%;
-        margin-left: 0; }
-        header .header-area .logo-area svg path {
-          transition: fill 0.5s ease-in-out;
-          border-top: 5px solid red; }
-          header .header-area .logo-area svg path:last-child:hover {
-            fill: #f77b37; }
-@keyframes draw {
-  to {
-    stroke-dashoffset: 0; } }
-    header .header-area ul {
-      margin-top: 6px;
-      margin-right: 4%;
-      position: absolute;
-      right: 0px;
-      height: 8vmin;
-      width: 45%;
-      display: flex;
-      list-style-type: none;
-      align-content: space-around; }
-      header .header-area ul li {
-        display: flex;
-        flex-grow: 1;
-        height: 100%; }
-        header .header-area ul li a {
-          display: flex;
-          width: 100%;
-          height: 100%;
-          color: white;
-          text-decoration: none;
-          transition: 0.3s; }
-          header .header-area ul li a:hover {
-            color: #777; }
-          header .header-area ul li a h4 {
-            margin: auto;
-            font-weight: 400; }
-
-.clip-down {
-  animation: slideDown 3s linear; }
-
-.clip-up {
-  animation: slideUp 3s linear; }
-
-@keyframes slideDown {
-  from {
-    transform: translateY(0px); }
-  to {
-    transform: translateY(0.01px); } }
-@keyframes slideUp {
-  from {
-    transform: translateY(0px); }
-  to {
-    transform: translateY(0.01px); } }
-.main {
-  height: 82vmin;
-  width: 100%;
-  background: url("../images/macbook.jpg");
-  background-size: cover;
-  background-position: center; }
-
-footer {
-  display: flex;
-  width: 100%;
-  height: 8vmin;
-  min-height: 60px;
-  background: #111; }
-  footer ul {
-    display: flex;
-    height: 1.5vmin;
-    margin: auto 2vw; }
-    footer ul li {
-      display: flex;
-      padding: 0 0.8vw;
-      color: #eee;
-      font: 15px "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: 300; }
-      footer ul li a {
-        text-decoration: none;
-        color: #eee; }
-
-#portfolio {
-  height: 82vmin;
-  width: 100%;
-  background: #ddd;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap; }
-  #portfolio .workframe {
-    width: 33.33333%;
-    height: 42%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; }
-    #portfolio .workframe a {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-      color: black; }
-      #portfolio .workframe a:hover img {
-        transform: scale(1.1); }
-      #portfolio .workframe a:hover .demo-image {
-        height: 80%; }
-      #portfolio .workframe a:hover .description {
-        bottom: 0px;
-        height: 20%; }
-      #portfolio .workframe a .description {
-        display: flex;
-        position: relative;
-        bottom: -20%;
-        height: 0px;
-        width: 100%;
-        background-color: #555555;
-        transition: 0.5s; }
-        #portfolio .workframe a .description h4 {
-          color: #ddd;
-          margin: auto; }
-      #portfolio .workframe a .demo-image {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        transition: 0.5s; }
-        #portfolio .workframe a .demo-image img {
-          height: 60%;
-          width: auto;
-          max-width: 80%;
-          margin: auto;
-          transition: 0.5s; }
-  #portfolio .frame-1 {
-    background-color: #ffffff; }
-  #portfolio .frame-3 {
-    background-color: #cbccce; }
-    #portfolio .frame-3 a .demo-image img {
-      height: 27%; }
-  #portfolio .frame-2 {
-    background-color: #444; }
-    #portfolio .frame-2 a .demo-image img {
-      height: 40%; }
-  #portfolio .frame-4 {
-    background-color: #1493ff; }
-    #portfolio .frame-4 a .demo-image img {
-      height: 30%; }
-  #portfolio .frame-5 {
-    background-color: #d76e02; }
-    #portfolio .frame-5 a .demo-image img {
-      height: 55%; }
-
-@media (max-width: 1120px) {
-  #portfolio {
-    height: 125vmin; }
-    #portfolio .workframe {
-      width: 50%;
-      height: 31%; } }
-@media (max-width: 641px) {
-  .logo-line {
-    display: none; }
-
-  header {
-    height: 14vmin;
-    min-height: 10vh; }
-    header .mobile-menu {
-      height: 4vh;
-      float: right;
-      margin-right: 3vh;
-      margin-top: 3vh; }
-    header .header-area {
-      display: none; }
-
-  #portfolio {
-    height: 250vmin; }
-    #portfolio .workframe {
-      width: 100%;
-      height: 16%; } }
-
-/*# sourceMappingURL=portfolio.css.map */
+Backtrace:
+portfolio.sass:283
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/static_parser.rb:21:in `parse_selector'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:427:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"and \": expected selector, was \"(min-device-wid...\"\A         on line 283 of portfolio.sass\A \A 278:     .workframe\A 279:       width: 50%\A 280:       height: 31%\A 281: \A 282: @media only screen\A 283: and (min-device-width : 320px)\A 284: and (max-device-width : 568px)\A 285:   .logo-line\A 286:     display: none\A 287: \A 288:   header"; }
