@@ -247,7 +247,9 @@ footer {
     #portfolio .workframe {
       width: 100%;
       height: 16%; }
-      #portfolio .workframe a .demo-image img {
-        margin: auto; } }
+      #portfolio .workframe a .demo-image {
+        display: flex; }
+        #portfolio .workframe a .demo-image img {
+          margin: auto auto; } }
 
 /*# sourceMappingURL=portfolio.css.map */
