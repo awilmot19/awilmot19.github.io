@@ -251,6 +251,10 @@ footer {
       #portfolio .workframe a .demo-image {
         display: flex; }
         #portfolio .workframe a .demo-image img {
-          margin: 0 auto; } }
+          margin: 0 auto;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%); } }
 
 /*# sourceMappingURL=portfolio.css.map */
