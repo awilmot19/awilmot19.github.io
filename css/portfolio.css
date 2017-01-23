@@ -224,6 +224,20 @@ footer {
       width: 50%;
       height: 31%; } }
 @media (max-width: 600px) {
+  .logo-line {
+    display: none; }
+
+  header {
+    height: 14vmin;
+    min-height: 10vh; }
+    header .mobile-menu {
+      height: 4vh;
+      float: right;
+      margin-right: 3vh;
+      margin-top: 3vh; }
+    header .header-area {
+      display: none; }
+
   #portfolio {
     height: 250vmin; }
     #portfolio .workframe {
