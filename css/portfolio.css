@@ -220,6 +220,10 @@ footer {
     background-color: #d76e02; }
     #portfolio .frame-5 a .demo-image img {
       height: 55%; }
+  #portfolio .frame-6 {
+    background-color: #c39450; }
+    #portfolio .frame-6 a .demo-image img {
+      height: 30%; }
 
 @media (max-width: 1120px) {
   #portfolio {
